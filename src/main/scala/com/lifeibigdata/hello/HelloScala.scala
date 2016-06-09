@@ -2,6 +2,8 @@ package com.lifeibigdata.hello
 
 import java.io.File
 
+import scala.io.Source
+
 /**
   * Created by lifei on 16/6/8.
   */
@@ -48,9 +50,12 @@ object HelloScala {
 //    for (i <- 0 until array.length) println(array(i))  //中括号 until
 //    for(elem : array) println(elem)
 
-    val ages = Map("Rocky" -> 10,"Tom" -> 20)
-    for ((k,v) <- ages) println("key is "+k+",value is "+v)
-    for ((k,_) <- ages) println("key is "+k)
+//    val ages = Map("Rocky" -> 10,"Tom" -> 20)
+//    for ((k,v) <- ages) println("key is "+k+",value is "+v)
+//    for ((k,_) <- ages) println("key is "+k)   //占位符
+
+    val file = Source.fromFile("/Users/lifei/githubproject/sbttest/build.sbt")//也可以指定网址
+    for(line <- file.getLines) println(line)
 
 
 
