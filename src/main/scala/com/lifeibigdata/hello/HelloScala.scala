@@ -2,7 +2,9 @@ package com.lifeibigdata.hello
 
 import java.io.File
 
+import scala.collection.mutable.ArrayBuffer
 import scala.io.Source
+import scala.util.Sorting
 
 /**
   * Created by lifei on 16/6/8.
@@ -54,10 +56,54 @@ object HelloScala {
 //    for ((k,v) <- ages) println("key is "+k+",value is "+v)
 //    for ((k,_) <- ages) println("key is "+k)   //占位符
 
-    val file = Source.fromFile("/Users/lifei/githubproject/sbttest/build.sbt")//也可以指定网址
-    for(line <- file.getLines) println(line)
+//    val file = Source.fromFile("/Users/lifei/githubproject/sbttest/build.sbt")//也可以指定网址
+//    for(line <- file.getLines) println(line)
+
+//    for(i <- 1 to 2; j <- 1 to 2) print(i*100+2+"   ")
+//    println()
+
+//    for(i <- 1 to 2; j <- 1 to 2;if i != j) print(i*100+j+"   ")
+//    println()
+
+//    def addA(x : Int) = x+ 100;  //返回值可以推断,不用谢返回值,递归除外
+//    val add = (x : Int) => x+100;  //在scala更加通用,匿名函数,函数是有值得
+
+//    def fac(x : Int):Int = if(x <= 0) 1 else x * fac(x - 1) //递归除外
+
+//    def combine(x : String,left : String = "[",right :String = "]")= left+x+right//默认值
+//
+//    def sum(x : Int*)={//可变参数
+//      var rst = 0
+//      for(arg <- x) rst += arg
+//      rst
+//
+//    }
+
+    //延迟执行
+//    lazy val file = Source.fromFile("/Users/lifei/githubproject/sbttest/build.sbt")//也可以指定网址
+//    println("scala")
+
+//    val nums = new Array[Int](10)
+//    val b = ArrayBuffer()
+
+//    val c = Array(1,2,3,4)
+//    val rst1 = for(elem <- c) yield elem*2
+//    val rst2 = for(elem <- c if elem %2==0) yield elem*2
+//    c.filter(_%2 == 0).map(2 * _)  //更为常用,每次循环一个元素可以用占位符
 
 
+//    Array(4,5,6).sum
+//    ArrayBuffer(1,2,3,4).max
+//    val b = ArrayBuffer(1,3,4,5)
+//    b.sorted
+//    Sorting.quickSort(c)
+//    c.mkString("and")
+//    c.mkString("< ",",",">")
+
+//    val m = Array.ofDim[Double](3,4)//矩阵
+
+
+    //zip
 
   }
 
